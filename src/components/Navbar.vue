@@ -10,6 +10,9 @@
           <li v-if="isLoggedIn">
             <router-link to="/">Dashboard</router-link>
           </li>
+          <li>
+            <router-link to="/profile">Profile</router-link>
+          </li>
           <li v-if="isLoggedIn">
             <router-link to="/catalog">Catalog</router-link>
           </li>

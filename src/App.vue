@@ -18,9 +18,3 @@ export default {
   }
 };
 </script>
-
-<style>
-nav {
-  margin-bottom: 10px;
-}
-</style>

@@ -1,14 +1,20 @@
 import Vue from "vue";
 import Router from "vue-router";
+
+// Dashboard
 import Home from "@/components/Home";
+import Checkin from "@/components/Checkin";
+import ViewLibraryCatalog from "@/components/ViewLibraryCatalog";
+import EditCatalog from "@/components/EditCatalog";
 import Catalog from "@/components/Catalog";
 import Patrons from "@/components/Patrons";
 import Branches from "@/components/Branches";
-import ViewLibraryCatalog from "@/components/ViewLibraryCatalog";
-import Checkin from "@/components/Checkin";
-import EditCatalog from "@/components/EditCatalog";
+
+// Account
 import Login from "@/components/Login";
 import Register from "@/components/Register";
+
+// database
 import firebase from "firebase";
 
 Vue.use(Router);

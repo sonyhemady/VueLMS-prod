@@ -62,7 +62,7 @@ export default {
     deleteAssets() {
       if (confirm("Are you sure?")) {
         db
-          .collection("LibraryCatalog")
+          .collection("LibraryCatalogAssets")
           .where("BookId", "==", this.$route.params.BookId)
           .get()
           .then(querySnapshot => {

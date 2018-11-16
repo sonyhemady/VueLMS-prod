@@ -1,12 +1,18 @@
 <template>
   <div id="home">
     <ul class="collection with-header">
-      <li class="collection-header"><h4>Library Catalog</h4></li>
-      <li v-for="book in books" v-bind:key="book.id" class="collection-item">
-        <div class="chip">{{book.Title}}</div>
-        {{book.BookId}}: {{book.Author_Director}} 
+      <li class="collection-header">
+        <h4>Library Catalog</h4>
+      </li>
 
-         <router-link class="secondary-content" v-bind:to="{ name: 'view-library-catalog', params: { BookId: book.BookId }}"><i class="fa fa-bullseye"></i></router-link>
+      <li v-for="book in books" v-bind:key="book.id" class="collection-item">
+
+        <div class="chip">{{book.Title}}</div>
+        {{book.BookId}}: {{book.Author_Director}}
+
+        <router-link class="secondary-content" v-bind:to="{ name: 'view-library-catalog', params: { BookId: book.BookId }}">
+          <i class="fa fa-bullseye"></i>
+        </router-link>
       </li>
     </ul>
     <div class="fixed-action-btn">
@@ -19,6 +25,7 @@
 
 <script>
 import db from "./firebaseInit";
+
 export default {
   name: "home",
   data() {
